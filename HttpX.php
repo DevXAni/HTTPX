@@ -1,6 +1,6 @@
 <?php
 // ================================================================================================================================
-class HTTPX
+class HttpX
 {
     private static $cookieFile = 'cookie.txt';
     private static $proxy = null;
