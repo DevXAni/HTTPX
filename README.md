@@ -12,7 +12,7 @@ This repository contains a simple PHP utility class for making HTTP requests wit
 
 
 ### Installation
-    Clone this repository to your local environment.
+Clone this repository to your local environment.
     
     $ git clone https://github.com/DevXAni/HTTPX.git
 
@@ -33,7 +33,7 @@ $SendRequest::setProxy('http://proxyserver:8080', 'user:password');
 #### 3. Sending an HTTP Request::
 --------
 ```php
-$response = $SendRequest::send('https://example.com', 'GET');
+$response = $SendRequest::send('https://example.com', 'GET')->body;
 ```
 
 # Examples
@@ -48,7 +48,7 @@ $headers = [
 ];
 $url = 'https://example.com/';
 $data = 'example';
-$SendRequest::send($url, "POST", $data, $headers);
+$SendRequest::send($url, "POST", $data, $headers)->body;
 ```
 ### GET Syntax
 
@@ -60,7 +60,7 @@ $headers = [
   'user-agent: Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_6) AppleWebKit/603.3 (KHTML, like Gecko) Chrome/48.0.3698.118 Safari/600',
 ];
 $url = 'https://example.com/';
-$SendRequest::send($url, "GET",headers: $headers);
+$SendRequest::send($url, "GET",headers: $headers)->body;
 ```
 
 ## Contributing
